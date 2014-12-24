@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Install ghr ..."
+brew install tcnksm/ghr/ghr
+
 echo "Install Python ..."
 unset -e
 ${PYTHON_INSTALL_PATH} ${PYTHON_VERSION} ${PYTHON_PREFIX}
