@@ -2,16 +2,18 @@
 
 set -e
 
-tag="$(scripts/tag)"
-
 if [[ "$TRAVIS_BRANCH" != "master" ]]; then
   echo "Skip the release process"
   exit 0
 fi
 
+tag="$(scripts/tag)"
+dist_root_path="dists"
+dist_path="${dist_root_path}/ansible-osx-package-${tag}.tar.bz2"
+
 echo "Create release distribution ..."
-mkdir -p dists
-tar cjf dists/${tag}.tar.bz2 $INSTALL_PREFIX
+mkdir -p $dist_root_path
+tar cjf $dist_path $INSTALL_PREFIX
 
 echo "Create GitHub Release ..."
 ghr \
@@ -19,4 +21,4 @@ ghr \
   --token $GITHUB_TOKEN \
   --prerelease \
   $tag \
-  dists/
+  $dist_root_path
