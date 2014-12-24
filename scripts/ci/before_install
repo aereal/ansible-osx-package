@@ -1,22 +1,16 @@
 #!/bin/bash
 
 python_install_url='https://raw.githubusercontent.com/tagomoris/xbuild/master/python-install'
-python_install_path='python-install'
-python_version='2.7.9'
-python_prefix="/opt/python-${python_version}"
 
 echo "python_install_url  = ${python_install_url}"
-echo "python_install_path = ${python_install_path}"
-echo "python_version      = ${python_version}"
-echo "python_prefix       = ${python_prefix}"
 
 echo 'Update Homebrew ...'
 brew update
 
 echo 'Fetch python-install ...'
-wget -O $python_install_path $python_install_url
-chmod +x $python_install_path
+wget -O $PYTHON_INSTALL_PATH $python_install_url
+chmod +x $PYTHON_INSTALL_PATH
 
 echo 'Prepare Python directories ...'
-sudo mkdir -p $python_prefix
-sudo chown -R $(id -un):$(id -gn) $python_prefix
+sudo mkdir -p $PYTHON_PREFIX
+sudo chown -R $(id -un):$(id -gn) $PYTHON_PREFIX

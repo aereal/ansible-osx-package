@@ -7,3 +7,5 @@ install:
   - /opt/python-2.7.9/bin/pip install --upgrade ansible
 script:
   - /opt/python-2.7.9/bin/ansible --version
+env:
+  - PYTHON_VERSION='2.7.9' PYTHON_PREFIX='/opt/python-2.7.9' PYTHON_INSTALL_PATH='./python-install'
