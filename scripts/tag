@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+version="$(git tag --sort='-version:refname' | grep '^\d\+[.]\d\+[.]\d\+$' | head -n 1)"
+version="${version:-0.0.0}"
+prerelease_version='nightly'
+meta="$(date +'%Y%m%d%H%M%S')"
+tag="${version}-${prerelease_version}+${meta}"
+
+echo $tag
