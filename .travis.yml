@@ -3,8 +3,7 @@ language: objective-c
 before_install:
   - ./scripts/ci/before_install
 install:
-  - ./python-install 2.7.9 /opt/python-2.7.9
-  - /opt/python-2.7.9/bin/pip install --upgrade ansible
+  - ./scripts/ci/install
 script:
   - /opt/python-2.7.9/bin/ansible --version
 env:
