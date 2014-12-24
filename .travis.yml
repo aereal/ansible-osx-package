@@ -1,0 +1,10 @@
+---
+language: objective-c
+before_install:
+  - brew update
+  - wget https://raw.githubusercontent.com/tagomoris/xbuild/master/python-install
+  - chmod +x python-install
+install:
+  - true
+script:
+  - true
