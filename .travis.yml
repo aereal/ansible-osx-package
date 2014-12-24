@@ -5,6 +5,7 @@ before_install:
   - wget https://raw.githubusercontent.com/tagomoris/xbuild/master/python-install
   - chmod +x python-install
 install:
-  - true
+  - ./python-install 2.7.9 /opt/python-2.7.9
+  - /opt/python-2.7.9/bin/pip install --upgrade ansible
 script:
-  - true
+  - /opt/python-2.7.9/bin/ansible --version
