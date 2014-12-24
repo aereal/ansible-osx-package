@@ -5,7 +5,7 @@ set -e
 version="$(git tag | grep '^\d\+[.]\d\+[.]\d\+$' | sort -r | head -n 1)"
 version="${version:-0.0.0}"
 prerelease_version='nightly'
-meta="$(date +'%Y%m%d%H%M%S')"
+meta="$(uname -s).$(uname -m).$(uname -p).$(date +'%Y%m%d%H%M%S')" # e.g. Darwin.x86_64.i386.20141231123456
 tag="${version}-${prerelease_version}+${meta}"
 
 echo $tag
