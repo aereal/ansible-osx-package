@@ -11,7 +11,7 @@ fi
 
 echo "Create release distribution ..."
 mkdir -p dists
-tar cjf dists/${tag}.tar.bz2 $PYTHON_PREFIX
+tar cjf dists/${tag}.tar.bz2 $INSTALL_PREFIX
 
 echo "Create GitHub Release ..."
 ghr \

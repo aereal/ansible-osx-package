@@ -14,5 +14,5 @@ wget -O $PYTHON_INSTALL_PATH $python_install_url
 chmod +x $PYTHON_INSTALL_PATH
 
 echo 'Prepare Python directories ...'
-sudo mkdir -p $PYTHON_PREFIX
-sudo chown -R $(id -un):$(id -gn) $PYTHON_PREFIX
+sudo mkdir -p $INSTALL_PREFIX
+sudo chown -R $(id -un):$(id -gn) $INSTALL_PREFIX

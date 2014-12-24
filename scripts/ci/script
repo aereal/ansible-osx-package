@@ -2,4 +2,4 @@
 
 set -e
 
-${PYTHON_PREFIX}/bin/ansible --version
+${INSTALL_PREFIX}/bin/ansible --version

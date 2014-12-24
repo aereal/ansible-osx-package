@@ -5,7 +5,7 @@ brew install tcnksm/ghr/ghr
 
 echo "Install Python ..."
 unset -e
-${PYTHON_INSTALL_PATH} ${PYTHON_VERSION} ${PYTHON_PREFIX}
+${PYTHON_INSTALL_PATH} ${PYTHON_VERSION} ${INSTALL_PREFIX}
 if [[ $? -ne 0 ]]; then
   cat /tmp/${USER}-python-install.log
   exit $?
@@ -13,4 +13,4 @@ fi
 set -e
 
 echo "Install Ansible ..."
-${PYTHON_PREFIX}/bin/pip install --upgrade ansible
+${INSTALL_PREFIX}/bin/pip install --upgrade ansible
