@@ -6,6 +6,8 @@ install:
   - ./scripts/ci/install
 script:
   - ./scripts/ci/script
+after_success:
+  - ./scripts/ci/after_success
 env:
   - PYTHON_VERSION='2.7.9' PYTHON_PREFIX='/opt/python-2.7.9' PYTHON_INSTALL_PATH='./python-install'
   - secure: "OUJ5CMMLDiHdU+9VAKJESagROaEGX5YVxYg7XcOgph5qmp7ZnJt0d/fCWQszUiCrMIVjr/bwoauzYeNBzaxJpp8SPSfPgZHEdyGdUV+ZFxROSO8ePghQGsTO7yxhuQC6k5QV5bgFIXMiWECA0awrwZNnH9pyYNYKtN3Go8Kb4M4="

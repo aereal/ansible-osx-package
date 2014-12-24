@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+tag="$(scripts/tag)"
+
+if [[ "$TRAVIS_BRANCH" != "master" ]]; then
+  echo "Skip the release process"
+  exit 0
+fi
+
+echo "Create release distribution ..."
+mkdir -p dists
+tar cjf dists/${tag}.tar.bz2 $PYTHON_PREFIX
+
+echo "Create GitHub Release ..."
+ghr \
+  --username aereal \
+  --token $GITHUB_TOKEN \
+  --prerelease \
+  $tag \
+  dists/
