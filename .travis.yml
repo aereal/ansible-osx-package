@@ -1,11 +1,7 @@
 ---
 language: objective-c
 before_install:
-  - brew update
-  - wget https://raw.githubusercontent.com/tagomoris/xbuild/master/python-install
-  - chmod +x python-install
-  - sudo mkdir -p /opt
-  - sudo chown -R $USER /opt
+  - ./scripts/ci/before_install
 install:
   - ./python-install 2.7.9 /opt/python-2.7.9
   - /opt/python-2.7.9/bin/pip install --upgrade ansible
