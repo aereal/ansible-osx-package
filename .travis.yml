@@ -5,7 +5,7 @@ before_install:
   - wget https://raw.githubusercontent.com/tagomoris/xbuild/master/python-install
   - chmod +x python-install
   - sudo mkdir -p /opt
-  - sudo chown $USER -R /opt
+  - sudo chown -R $USER /opt
 install:
   - ./python-install 2.7.9 /opt/python-2.7.9
   - /opt/python-2.7.9/bin/pip install --upgrade ansible
