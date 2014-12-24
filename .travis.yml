@@ -5,6 +5,6 @@ before_install:
 install:
   - ./scripts/ci/install
 script:
-  - /opt/python-2.7.9/bin/ansible --version
+  - ./scripts/ci/script
 env:
   - PYTHON_VERSION='2.7.9' PYTHON_PREFIX='/opt/python-2.7.9' PYTHON_INSTALL_PATH='./python-install'
