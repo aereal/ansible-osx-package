@@ -1,6 +1,6 @@
 # ansible-osx-package
 
-Build Python and Ansible for bootstrap (unofficial)
+Build [Python][python] and [Ansible][ansible] for bootstrap (unofficial)
 
 ## Description
 
@@ -29,3 +29,5 @@ tar xjf $tarball_path
 ```
 
 [releases]: https://github.com/aereal/ansible-osx-package/releases
+[ansible]: http://www.ansible.com/home
+[python]: https://www.python.org/
