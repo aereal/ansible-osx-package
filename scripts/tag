@@ -2,7 +2,7 @@
 
 set -e
 
-version="$(git tag --sort='-version:refname' | grep '^\d\+[.]\d\+[.]\d\+$' | head -n 1)"
+version="$(git tag | grep '^\d\+[.]\d\+[.]\d\+$' | sort -r | head -n 1)"
 version="${version:-0.0.0}"
 prerelease_version='nightly'
 meta="$(date +'%Y%m%d%H%M%S')"
